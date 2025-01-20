@@ -13,7 +13,8 @@ namespace PlayerTest
         private string name;
         private int level;
 
-        private Item item;
+        private string item;
+        List<Item> items;
 
         //メソッド
         //コンストラクタ
@@ -23,9 +24,9 @@ namespace PlayerTest
             this.level = level;
         }
 
-        public Player(Item item)
+        public Player()
         {
-            this.item = item;
+            items = new List<Item>();
         }
 
         //攻撃する
@@ -57,7 +58,22 @@ namespace PlayerTest
         //アイテムを使う
         public void UseItem()
         {
-            item.Use();
+            Console.WriteLine("{0}を使った", item);
+        }
+
+        //アイテムを受け取る
+        public void AddItem(Item item)
+        {
+            items.Add(item);
+        }
+
+        //アイテムを使う
+        public void UseItems()
+        {
+            foreach (Item item in items)
+            {
+                item.Use();
+            }
         }
     }
 }

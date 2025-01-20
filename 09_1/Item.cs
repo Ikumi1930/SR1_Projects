@@ -22,7 +22,7 @@ namespace ItemTest
         public void Use()
         {
             Console.WriteLine("{0}を使った", name);
-        }
 
+        }
     }
 }
