@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class
+{
+    internal class Player
+    {
+        private string name;
+        public int level;
+
+        public Player(string name, int level)
+        {
+            this.name = name;
+            this.level = level;
+        }
+
+        private void Attack()
+        {
+            Console.WriteLine("攻撃!!");
+        }
+
+        public void Defense()
+        {
+            Console.WriteLine("防御した");
+        }
+
+        public void LevelUp()
+        {
+            level++;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public int GetLevel()
+        {
+            return level;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Class;
+
+namespace Class
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Player player = new Player("ロト", 1);
+
+            player.level =  99999;
+
+            Console.WriteLine("名前 : {0}", player.GetName());
+            Console.WriteLine("レベル : {0}",player.GetLevel());
+
+            player.Attack();
+            player.Defense();
+
+            player.LevelUp();
+            Console.WriteLine("レベル : {0}",player.GetLevel()); 
+
+            Console.ReadLine();
+        }
+    }
+}
