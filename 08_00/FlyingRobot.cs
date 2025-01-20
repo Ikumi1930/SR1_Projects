@@ -16,7 +16,6 @@ namespace FlyingRobotTest
         //コンストラクタ
         public FlyingRobot(string name) : base(name)
         {
-            this.name = name;
         }
 
         //爆弾を落とす

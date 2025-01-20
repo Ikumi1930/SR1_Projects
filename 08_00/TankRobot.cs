@@ -16,7 +16,6 @@ namespace TankRobotTest
         //コンストラクタ
         public TankRobot(string name) : base(name)
         {
-            this.name = name;
         }
 
         //キャノン砲を撃つ
