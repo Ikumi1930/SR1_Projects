@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel;
+using ShapeTest;
+using CircleTest;
+using RectangleTest;
+using TriangleTest;
+
+namespace ClassC
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Shape> shapes = new List<Shape>();
+
+            shapes.Add(new Circle(10));
+            shapes.Add(new Rectangle(5, 7));
+            shapes.Add(new Triangle(5, 7));
+
+            foreach (Shape shape in shapes)
+            {
+                //Drawメソッドのテスト
+                shape.Draw();
+                //Areaメソッドのテスト
+                Console.WriteLine("面積 : {0}", shape.Area());
+            }
+
+            //一時停止
+            Console.ReadLine();
+        }
+    }
+}
